@@ -195,6 +195,6 @@ async def _(Mbot,message):
         print(e)
         if LOG_GROUP:
                await Mbot.send_message(LOG_GROUP,f"Youtube {e} {link}")
-               await message.reply(f"400: Sorry, Unable To Find It  try another or report it  to @masterolic or support chat @Mohanish7777777 🤖  ")
+               await message.reply(f"400: Sorry, Unable To Find It  try another or report it  to @Mohanish7777777 or support chat  🤖  ")
                await Mbot.send_message(LOG_GROUP, traceback.format_exc())
             
