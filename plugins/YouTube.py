@@ -67,7 +67,6 @@ async def ytdl_video(path, video_url, id):
                        return filename
                    except Exception as e:
                        print(e)
-
 async def ytdl_down(path,video_url,id):
 #    pool = multiprocessing.Pool(processes=8)
     print(video_url)
@@ -160,14 +159,25 @@ async def _(Mbot,message):
             await m.delete()
             if LOG_GROUP:
                await Mbot.send_message(LOG_GROUP,f"YouTube Shorts {e} {link}")
-               await message.reply(f"400: Sorry, Unable To Find It  try another or report it  to @Mohanish7777777 or support chat  🤖  ")
+               await message.reply(f"400: Sorry, Unable To Find It  try another or report it  to @masterolic or support chat @spotify_supportbot 🤖  ")
                print(traceback.format_exc())
                await Mbot.send_message(LOG_GROUP, traceback.format_exc())
-               
-        return await message.reply("Check out @xadmin_instabot(music)  @MohanishX(Channel) \n Please Support Us By Maintain This Project")
+
+        return await message.reply("Check out @spotify_downloa_bot(music)  @spotifynewss(Channel) \n Please Support Us By /donate To Maintain This Project")
     try:
         if "music.youtube.com" in link:
             link=link.replace("music.youtube.com","youtube.com")
+
+    
+        
+          
+    
+
+        
+        Expand All
+    
+    @@ -183,18 +183,18 @@ async def _(Mbot,message):
+  
         ids = await getIds(link)
         videoInPlaylist = len(ids)
         randomdir = "/tmp/"+str(randint(1,100000000))
@@ -183,18 +193,17 @@ async def _(Mbot,message):
             thumnail = await thumb_down(id[0])
           #  await message.reply(fileLink)
         #    await message.reply_audio(fileLink)
-            AForCopy = await message.reply_audio(fileLink,caption=f"[{id[3]}](https://youtu.be/{id[0]}) - {id[2]} Thank you for using - @xadmin_instabot",title=id[3].replace("_"," "),performer=id[2],thumb=thumnail,duration=id[4])
+            AForCopy = await message.reply_audio(fileLink,caption=f"[{id[3]}](https://youtu.be/{id[0]}) - {id[2]} Thank you for using - @InstaReelsdownbot",title=id[3].replace("_"," "),performer=id[2],thumb=thumnail,duration=id[4])
             if DUMP_GROUP:
                 await PForCopy.copy(DUMP_GROUP)
                 await AForCopy.copy(DUMP_GROUP)
         await m.delete()
         if os.path.exists(randomdir):
            rmtree(randomdir)
-        await message.reply("Check out @MohanishX(Channel) \n Please Support Us To Maintain This Project")
+        await message.reply("Check out @spotify_downloa_bot(music)  @spotifynewss(Channel) \n Please Support Us By /donate To Maintain This Project")
     except Exception as e:
         print(e)
         if LOG_GROUP:
                await Mbot.send_message(LOG_GROUP,f"Youtube {e} {link}")
-               await message.reply(f"400: Sorry, Unable To Find It  try another or report it  to @Mohanish7777777 or support chat  🤖  ")
+               await message.reply(f"400: Sorry, Unable To Find It  try another or report it  to @masterolic or support chat @spotify_supportbot 🤖  ")
                await Mbot.send_message(LOG_GROUP, traceback.format_exc())
-            
